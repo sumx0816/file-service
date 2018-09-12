@@ -1,0 +1,22 @@
+server:
+    port: 8020
+
+eureka:
+    client:
+        service-url:
+            defaultZone: http://localhost:8070/eureka/
+
+spring:
+    application:
+        name: service-zuul
+
+# api-a 的请求全部转发给 service-ribbon 服务
+# api-b 的请求全部转发给 service-feign 服务
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: service-ribbon
+    api-b:
+      path: /api-b/**
+      serviceId: service-feign
