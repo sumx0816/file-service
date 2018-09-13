@@ -5,12 +5,10 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/forezp/SpringcloudConfig/
-          search-paths: respo
-          username:
-          password:
+          uri: https://github.com/sumx0816/resource/test
+          username: s_m_x_1234@qq.com
+          password: Su198298
           default-label: master
-
 server:
   port: 8010
 
