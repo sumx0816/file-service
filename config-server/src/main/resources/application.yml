@@ -5,7 +5,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/sumx0816/resource/test
+          uri: https://github.com/sumx0816/resource
           username: s_m_x_1234@qq.com
           password: Su198298
           default-label: master
