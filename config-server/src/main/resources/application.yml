@@ -10,5 +10,9 @@ spring:
           password: Su198298
           default-label: master
 server:
-  port: 8010
+  port: 8011
 
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8070/eureka/

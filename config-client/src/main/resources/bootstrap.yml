@@ -1,10 +1,33 @@
 server:
-  port: 2500
+  port: 2501
 spring:
   application:
     name: config-client
   cloud:
     config:
-      uri: http://localhost:8010
+      #uri: http://localhost:8010
       label: master
       profile: dev
+      discovery:
+        enabled: true
+        service-id: config-server
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8070/eureka
+management:
+  endpoint:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh

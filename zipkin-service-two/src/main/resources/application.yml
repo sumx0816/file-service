@@ -1,0 +1,8 @@
+server:
+  port: 8013
+spring:
+  application:
+    name: zipkin-service-two
+  zipkin:
+    base-url: localhost:9411
+
